@@ -12,7 +12,7 @@ import android.provider.Settings;
 import android.support.annotation.Nullable;
 
 /**
- * Created by filipp on 6/16/2016.
+ * Created by H.Pasarin 6/6/2017.
  */
 public class GPS_Service extends Service {
     //declaramos los objetos que necesitamos.
@@ -45,7 +45,9 @@ public class GPS_Service extends Service {
 
                 @Override
                 public void onLocationChanged(Location location) {
-                    //el String es el filtro, en la actividad principal debe userse este mismo filtro.
+                    //el String "location_update" es el filtro, en la actividad principal debe userse este mismo filtro.
+                    //cuando la posicion cambia la retransmitimos por medio de un intent.
+
                     Intent i = new Intent("location_update");
                     i.putExtra("coordinates",location.getLongitude()+" "+location.getLatitude());
                     sendBroadcast(i);
@@ -72,13 +74,13 @@ public class GPS_Service extends Service {
                 }
             };
 
-            //inicializamos el locatonManager con el metodo getSystemService.
+            //inicializamos el locationManager con el metodo getSystemService.
         locationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
 
         //para empezar el rpoceso, llamamos al manager con el metodo requestLocationUpdates, configurandolo
-        //para que actualice cada 3 segundos,.
+        //para que actualice cada 20 segundos,.
         //noinspection MissingPermission
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,3000,0,listener);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,20000,0,listener);
 
     }
     //cuando se destruye el servicio.

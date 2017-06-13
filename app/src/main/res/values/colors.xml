@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorFondoAplicacion">#c20</color>
+    <color name="colorForegroundApp">#ddd</color>
+    <color name="colorTextViews">#ddd</color>
+    <color name="colorFondoBoton">#111</color>
 </resources>
