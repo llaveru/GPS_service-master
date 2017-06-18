@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
+import android.widget.Toast;
 
 /**
  * Created by H.Pasarin 6/6/2017.
@@ -31,6 +32,8 @@ public class GPS_Service extends Service {
     //cuando empieza el servicio:
     @Override
     public void onCreate() {
+
+        Toast.makeText(getApplicationContext(),"Comienza geolocalización.",Toast.LENGTH_LONG).show();
             //inicializamos el LocationListener
             listener = new LocationListener() {
 
@@ -89,6 +92,7 @@ public class GPS_Service extends Service {
     public void onDestroy() {
         super.onDestroy();
         if(locationManager != null){
+            Toast.makeText(getApplicationContext(),"Se detiene la geolocalizacion.",Toast.LENGTH_LONG).show();
 
             locationManager.removeUpdates(listener);
         }

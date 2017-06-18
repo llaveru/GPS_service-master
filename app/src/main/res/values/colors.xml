@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+
     <color name="colorFondoAplicacion">#c20</color>
     <color name="colorForegroundApp">#ddd</color>
     <color name="colorTextViews">#ddd</color>
     <color name="colorFondoBoton">#111</color>
+
+    <color name="colorPrimary">#16561e</color>
+    <color name="colorPrimaryDark">#1b311b</color>
+    <color name="colorAccent">#966311</color>
+    <color name="fondolistview">#d9ae52</color>
+    <color name="fondoPrincipal">#7e9e85</color>
+    <color name="colorFondoDrawer">#3b5c3f</color>
+    <color name="colorTextoToolbar">#cc7700</color>
+    <color name="fondoBoton">#1d3b12</color>
+    <color name="colorTextoBoton">#a77a30</color>
+    <color name="colorTintIconos">#cc2</color>
+    <color name="colorDestaca">#82cc33</color>
 </resources>

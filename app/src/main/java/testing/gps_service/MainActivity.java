@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         return idTelefono;
     }
 
+
+
     //aqui preguntamos si existe el BroadcastReceiver , si no existe lo creamos,
     //y le pasamos el filtro "location_update".para que el receptor solo este "atento", o gestione
     //solamente las retransmisiones que llaven asociado el String "location_update";
@@ -118,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), GPS_Service.class);
                 startService(i);
+
             }
         });
         //para el servicio.
@@ -252,7 +255,7 @@ class TareaInsertar extends AsyncTask<String, Void, String> {
         BufferedWriter bw = null;
 
             /*
-            EXPLICACION DE URL.Encoder
+            EXPLICACION DE URL.Encoder por si interesa
 
             Utility class for HTML form encoding.
             This class contains static methods for converting a String to the application/x-www-form-urlencoded MIME format.
@@ -294,7 +297,7 @@ When encoding a String, the following rules apply:
             e.printStackTrace();
         }
 
-
+//esta cadena la recogera el onPostExecute, para utilizarla en la UI.
         return "registro correcto";
 
 
